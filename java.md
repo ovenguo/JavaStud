@@ -7,8 +7,9 @@
         application.setAttribute("username", value);//value的类型是Object，可以替换为任意类型
 
     页面二用name变量接收传入的参数：
-    ServletContext application = getServletContext();//如果是servlet则需加上这行
-    String name = (String)application.getAttribute("username");//页面一的参数是什么类型，括号里就写什么类型
+        
+        ServletContext application = getServletContext();//如果是servlet则需加上这行
+        String name = (String)application.getAttribute("username");//页面一的参数是什么类型，括号里就写什么类型
 
 2. 用jsp:forward方法：
     同样假设页面一是jsp，页面二是servlet，从jsp传参给servlet：
@@ -26,7 +27,8 @@
     </html>
 
     页面二的doGet方法中：
-    String name = request.getParameter("username");
+        
+        String name = request.getParameter("username");
 
 ##二、JDBC访问数据库：
     
